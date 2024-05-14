@@ -1,8 +1,8 @@
 #!/bin/bash
 
-dnf install -y git zsh xclip fish tmux tmux-plugin-manager xdg-desktop-portal-gtk flameshot npm go elixir docker docker-compose leafpad pyhton3 python3-pip cuda
+dnf install -y git zsh xclip fish tmux tmux-plugin-manager xdg-desktop-portal-gtk flameshot npm go elixir docker docker-compose leafpad pyhton3 python3-pip blueman
 dnf install -y gtk-engine-murrine fd ripgrep vim nitrogen noto-fonts nerd-fonts brightnessctl network-manager-applet file-roller fastfetch pavucontrol lxappearance-gtk3
-dnf install -y xautolock picom polybar neovim pcmanfm neovim leafpad flatpak feh clang rpi-imager ttf-font-awesome waybar swaylock swayidle i3exit light gnome-boxes rust-analyzer rustup
+dnf install -y xautolock picom polybar neovim pcmanfm leafpad flatpak feh clang rpi-imager ttf-font-awesome waybar swaylock swayidle i3exit light gnome-boxes rust-analyzer rustup
 
 #mullvad
 
@@ -11,7 +11,6 @@ sudo dnf config-manager --add-repo https://repository.mullvad.net/rpm/stable/mul
 
 # Install the package
 sudo dnf install mullvad-vpn
-
 
 #asus laptop
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
@@ -126,4 +125,4 @@ echo "Configuration for alsa-base.conf complete!"
 
 echo "Configuration complete!"
 cd ~
-rm -rf ~/dotfiles
+rm -rf ~/fedora-config
