@@ -59,6 +59,9 @@ echo "Enabling bluetooth..."
 sudo systemctl start bluetooth
 sudo systemctl enable bluetooth
 
+# Flathub Setup
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
 # Steam Flatpak
 echo "Installing Steam Flatpak..."
 flatpak install -y flathub com.valvesoftware.Steam
@@ -72,6 +75,11 @@ flatpak install -y com.valvesoftware.Steam.CompatibilityTool.Proton-GE
 echo "Installing Vivaldi Flatpak"
 flatpak install -y flathub com.vivaldi.Vivaldi
 sudo ln -s /var/lib/flatpak/exports/bin/com.vivaldi.Vivaldi /usr/local/bin/vivaldi
+
+# Jellyfin Flatpak
+echo "Installing Jellyfin Flatpak"
+flatpak install -y flathub org.jellyfin.JellyfinServer
+sudo ln -s /var/lib/flatpak/exports/bin/org.jellyfin.JellyfinServer /usr/local/bin/jellyfin
 
 # OBS Flatpak
 echo "Installing OBS Flatpak"
