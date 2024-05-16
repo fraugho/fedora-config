@@ -78,8 +78,8 @@ sudo ln -s /var/lib/flatpak/exports/bin/com.vivaldi.Vivaldi /usr/local/bin/vival
 
 # Jellyfin Flatpak
 echo "Installing Jellyfin Flatpak"
-flatpak install -y flathub org.jellyfin.JellyfinServer
-sudo ln -s /var/lib/flatpak/exports/bin/org.jellyfin.JellyfinServer /usr/local/bin/jellyfin
+flatpak install -y flathub com.github.iwalton3.jellyfin-media-player
+sudo ln -s /var/lib/flatpak/exports/bin/com.github.iwalton3.jellyfin-media-player /usr/local/bin/jellyfin
 
 # OBS Flatpak
 echo "Installing OBS Flatpak"
