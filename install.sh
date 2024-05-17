@@ -1,8 +1,14 @@
 #!/bin/bash
 
-dnf install -y git zsh xclip fish tmux tmux-plugin-manager xdg-desktop-portal-gtk flameshot npm go elixir docker docker-compose leafpad pyhton3 python3-pip blueman
+dnf install -y git zsh xclip fish tmux tmux-plugin-manager xdg-desktop-portal-gtk flameshot npm go elixir docker docker-compose leafpad pyhton3 python3-pip blueman zsh
 dnf install -y gtk-engine-murrine fd ripgrep vim nitrogen noto-fonts nerd-fonts brightnessctl network-manager-applet file-roller fastfetch pavucontrol lxappearance-gtk3
 dnf install -y xautolock picom polybar neovim pcmanfm leafpad flatpak feh clang rpi-imager ttf-font-awesome waybar swaylock swayidle i3exit light gnome-boxes rust-analyzer rustup
+
+#zsh setup
+curl -L git.io/antigen > ~/antigen.zsh
+git clone https://github.com/fraugho/zsh-config.git ~/zsh-config
+cp ~/zsh-config/.zshrc ~/
+rm -rf ~/zsh-config
 
 #mullvad
 
@@ -132,5 +138,4 @@ echo "options snd-hda-intel model=asus-zenbook" | sudo tee -a /etc/modprobe.d/al
 echo "Configuration for alsa-base.conf complete!"
 
 echo "Configuration complete!"
-cd ~
 rm -rf ~/fedora-config
