@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dnf install -y git zsh xclip fish tmux tmux-plugin-manager xdg-desktop-portal-gtk flameshot npm go elixir docker docker-compose leafpad pyhton3 python3-pip blueman zsh
+dnf install -y git zsh xclip fish tmux tmux-plugin-manager xdg-desktop-portal-gtk flameshot npm go elixir docker docker-compose leafpad pyhton3 python3-pip blueman zsh VirtualBox
 dnf install -y gtk-engine-murrine fd ripgrep vim nitrogen noto-fonts nerd-fonts brightnessctl network-manager-applet file-roller fastfetch pavucontrol lxappearance-gtk3
 dnf install -y xautolock picom polybar neovim pcmanfm leafpad flatpak feh clang rpi-imager ttf-font-awesome waybar swaylock swayidle i3exit light gnome-boxes rust-analyzer rustup
 
@@ -110,8 +110,13 @@ sudo ln -s /var/lib/flatpak/exports/bin/org.onlyoffice.desktopeditors /usr/bin/o
 
 # Tor Browser Flatpak
 echo "Installing Tor Browser Flatpak..."
-flatpak install -y flathub com.github.micahflee.torbrowser-launcher
-sudo ln -s /var/lib/flatpak/exports/bin/com.github.micahflee.torbrowser-launcher /usr/bin/tor-browser
+flatpak install -y flathub org.torproject.torbrowser-launcher
+sudo ln -s /var/lib/flatpak/exports/bin/org.torproject.torbrowser-launcher /usr/bin/tor-browser
+
+# Mullvad Browser  Flatpak
+# echo "Installing Mullvad Browser Flatpak..."
+flatpak install -y flathub net.mullvad.MullvadBrowser
+sudo ln -s /var/lib/flatpak/exports/bin/net.mullvad.MullvadBrowser /usr/bin/mullvad-browser
 
 # Logism Flatpak
 echo "Installing Logisim Flatpak..."
